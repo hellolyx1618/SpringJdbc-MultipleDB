@@ -12,12 +12,12 @@ import com.lyx.PersonService;
 @ContextConfiguration(locations = "classpath:spring-dao.xml")
 public class MultipleDataSourceTest {
 
-	@Autowired
-	private PersonService personService;
+    @Autowired
+    private PersonService personService;
 
-	@Test
-	public void test12() {
-		this.personService.addperson();
-	}
+    @Test
+    public void test12() {
+        this.personService.addperson();
+    }
 
 }
