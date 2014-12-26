@@ -23,59 +23,58 @@ import com.lyx.PersonDao0;
 @TransactionConfiguration(transactionManager = "transactionManager", defaultRollback = false)
 public class JDBCTest {
 
-	@Autowired
-	private PersonDao personDao;
-	@Autowired
-	private PersonDao0 personDao0;
+    @Autowired
+    private PersonDao personDao;
+    @Autowired
+    private PersonDao0 personDao0;
 
-	@Test
-	public void test12() {
-		People people = new People();
-		people.setFirstName("sa");
-		people.setLastName("asdasfd");
-		this.personDao.addPeople(people);
-	}
+    @Test
+    public void test12() {
+        People people = new People();
+        people.setFirstName("sa");
+        people.setLastName("asdasfd");
+        this.personDao.addPeople(people);
+    }
 
-	@Test
-	public void test12121() {
-		System.out.println(this.personDao.count());
-	}
+    @Test
+    public void test12121() {
+        System.out.println(this.personDao.count());
+    }
 
-	@Test
-	public void test079876() {
-		System.out.println(this.personDao.findPeopleById(8));
-	}
+    @Test
+    public void test079876() {
+        System.out.println(this.personDao.findPeopleById(8));
+    }
 
-	@Test
-	public void test2323() {
-		System.out.println(this.personDao.findPeopleList(2, 3).size());
-	}
+    @Test
+    public void test2323() {
+        System.out.println(this.personDao.findPeopleList(2, 3).size());
+    }
 
-	@Test
-	public void test80990() {
-		// sort的第三种使用方法
-		List<Student> students = new ArrayList<Student>();
-		students.add(new Student("lyx", 12));
-		students.add(new Student("lyx", 1));
-		students.add(new Student("lyx", 7));
-		students.add(new Student("lyx", 4));
-		students.add(new Student("lyx", 3));
+    @Test
+    public void test80990() {
+        // sort的第三种使用方法
+        List<Student> students = new ArrayList<Student>();
+        students.add(new Student("lyx", 12));
+        students.add(new Student("lyx", 1));
+        students.add(new Student("lyx", 7));
+        students.add(new Student("lyx", 4));
+        students.add(new Student("lyx", 3));
 
-		// 实现Comparator接口（使用匿名内部类实现Comparator接口）
-		Collections.sort(students, new Comparator<Student>() {
-			public int compare(Student o1, Student o2) {
-				return o1.getAge() - o2.getAge();
-			}
-		});
+        // 实现Comparator接口（使用匿名内部类实现Comparator接口）
+        Collections.sort(students, new Comparator<Student>() {
+            public int compare(Student o1, Student o2) {
+                return o1.getAge() - o2.getAge();
+            }
+        });
 
-		for (Student s : students) {
-			System.out.println(s.toString());
-		}
-	}
+        for (Student s : students) {
+            System.out.println(s.toString());
+        }
+    }
 
 
+    public void test232323() {
 
-	public void test232323(){
-
-	}
+    }
 }
