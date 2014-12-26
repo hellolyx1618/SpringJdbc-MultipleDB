@@ -1,4 +1,4 @@
-SpringJdbc-MultipleDataSource
+SpringJdbc-MultipleDB
 =============================
 
-SpringJdbc-MultipleDataSource基于SpringJdbc提供多数据源的支持
+SpringJdbc-MultipleDB基于SpringJdbc提供多数据源的支持
