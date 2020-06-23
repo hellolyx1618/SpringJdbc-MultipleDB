@@ -5,8 +5,9 @@ package com.lyx;
  */
 public enum DataSourceLookupKey {
 
-    LOCAL_DATASOURCE("本地数据库"), REMOTE_DATASOURCE("远程数据库"), THREAD_DATASOURCE(
-            "THREAD数据库");
+    LOCAL_DATASOURCE("本地数据库"),
+    REMOTE_DATASOURCE("远程数据库"),
+    THREAD_DATASOURCE("THREAD数据库");
 
     private String value;
 
