@@ -9,12 +9,9 @@
 
     <!-- 定义包的扫描规则 -->
     <context:component-scan base-package="com.lyx">
-        <context:include-filter type="annotation"
-                                expression="org.springframework.stereotype.Service"/>
-        <context:include-filter type="annotation"
-                                expression="org.springframework.stereotype.Repository"/>
-        <context:include-filter type="annotation"
-                                expression="org.springframework.stereotype.Component"/>
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Service"/>
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Repository"/>
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Component"/>
     </context:component-scan>
 
     <!--tomcat jdbc pool数据源配置 -->
@@ -82,8 +79,7 @@
     <!-- 切面的配置 -->
     <aop:config>
         <aop:aspect id="determineDataSourceAspect" ref="determineDataSourceAspect">
-            <aop:pointcut id="dataSourcePoint"
-                          expression="@annotation(com.lyx.RequireDataSource)"/>
+            <aop:pointcut id="dataSourcePoint" expression="@annotation(com.lyx.RequireDataSource)"/>
             <aop:before method="determineDataSource" pointcut-ref="dataSourcePoint"/>
         </aop:aspect>
     </aop:config>
